@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Meta description and keywords -->
+  <meta name="description" content="RGU's Sport Society webpage">
+  <meta name="keywords" content="RGU, Sports, Society, info">
+
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+  <!-- Open Sans font -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  
+  <!-- Link to the style sheets -->
+  <link rel="stylesheet" href="main.css"> 
+
+  <!-- Title -->
+  <title>RGU | Sports Society</title>
+</head>
+<body>
+  <!-- Landing page -->
+  <header id="Home">
+    <div class="navbar hidden" id="navbar">
+      <nav>
+        <!-- <img id="logo" src="./RGU_Logo.svg" alt=""> -->
+        <ul>
+          <li><a target="_self" href="#Home">Home</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#contact">Contact</a></i>
+          <li><a href="#gallery">Gallery</a></i>
+          <li><a href="#members">Members</a></i>
+          <li><a href="#extra">Extra</i></a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Header content -->
+    <div class="header-content">
+      <h1>RGU SPORTS</h1>
+      <h1>SOCIETY</h1>
+      <a href="#membership" class="btn"> <i class="fas fa-chevron-circle-down"></i> &nbsp;Read More</a>
+    </div>
+  </header>
+
+  <!-- Membership page -->
+  <section id="membership">
+    <div class="wrapper" id="membership-content">
+      <div class="membership-top">
+        <div class="illustration" id="image-1"><img src="Images/Design element - Yoga.svg" alt=""></div>
+        <div class="illustration" id="image-2"><img src="Images/Design element - Weights.svg" alt=""></div>
+        <div class="illustration" id="image-3"><img src="Images/Design element - Ball.svg" alt=""></div>
+      </div>
+      <!-- Membership plan -->
+      <div class="membership-bottom">
+        <div class="box" id="standard">
+          <div class="subsection">
+            <h3>Standard</h3>
+            <div class="price">
+              <span id="price"><h4>£</h4></span>
+            </div>
+            <div class="deals">
+
+            </div>
+          </div>
+        </div>
+        <div class="box" id="gold">
+            
+        </div>
+        <div class="box" id="platinum">
+            
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Membership page -->
+  <section id="MYPAGE">
+    <div class="wrapper" id="content">
+      <!-- INSERT YOUR PAGE HERE -->
+      <h1>YOUR PAGE WILL BE HERE</h1>
+    </div>
+  </section>
+
+    <!-- Javascript -->
+    <script
+    src="https://code.jquery.com/jquery-3.5.0.min.js"
+    integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+    crossorigin="anonymous"
+    ></script>
+    <script>
+      // Show navbar on scroll
+      const navbar = document.getElementById('navbar');
+      window.onscroll = () => {
+
+      if (window.pageYOffset > 220) {
+        navbar.classList.remove('hidden');
+      } else {
+        navbar.classList.add('hidden');
+      }
+    };
+      // Smooth Scrolling
+      $('nav ul li a').on('click', function (e) {
+        if (this.hash !== '') {
+          e.preventDefault();
+  
+          const hash = this.hash;
+  
+          $('html, body').animate(
+            {
+              scrollTop: $(hash).offset().top - 100,
+            },
+            800
+          );
+        }
+      });
+      $('.btn').on('click', function (e) {
+        if (this.hash !== '') {
+          e.preventDefault();
+  
+          const hash = this.hash;
+  
+          $('html, body').animate(
+            {
+              scrollTop: $(hash).offset().top - 100,
+            },
+            600
+          );
+        }
+      });
+    </script>
+</body>
+</html>
